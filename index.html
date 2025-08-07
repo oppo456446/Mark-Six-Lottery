@@ -234,13 +234,18 @@
             color: #666;
         }
         
+        /* 表格滚动容器 */
+        .table-scroll-container {
+            max-height: 450px; /* 固定高度 */
+            overflow-y: auto;  /* 垂直滚动条 */
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin: 25px 0;
+        }
+        
         .lottery-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 25px 0;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
         
         .lottery-table th {
@@ -250,6 +255,9 @@
             text-align: center;
             font-size: 1.2rem;
             font-weight: bold;
+            position: sticky;
+            top: 0; /* 固定表头 */
+            z-index: 10;
         }
         
         .lottery-table td {
@@ -314,6 +322,25 @@
             margin: 0 5px;
         }
         
+        /* 滚动条美化 */
+        .table-scroll-container::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .table-scroll-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        .table-scroll-container::-webkit-scrollbar-thumb {
+            background: #c0392b;
+            border-radius: 10px;
+        }
+        
+        .table-scroll-container::-webkit-scrollbar-thumb:hover {
+            background: #e74c3c;
+        }
+        
         @media (max-width: 600px) {
             .site-header h1 {
                 font-size: 1.6rem;
@@ -360,6 +387,10 @@
             
             .image-container {
                 padding-top: 66.66%;
+            }
+            
+            .table-scroll-container {
+                max-height: 300px; /* 移动端较小高度 */
             }
         }
     </style>
@@ -416,67 +447,97 @@
                 </div>
             </div>
             
-            <table class="lottery-table">
-                <thead>
-                    <tr>
-                        <th colspan="2">新澳门精准 [平特一肖]</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>210期平特一肖 <span class="zodiac">[羊]</span></td>
-                        <td class="winning">开00中</td>
-                    </tr> 
-                    <tr>
-                        <td>209期平特一肖 <span class="zodiac">[蛇]</span></td>
-                        <td class="winning">开13中</td>
-                    </tr> 
-                    <tr>
-                        <td>208期平特一肖 <span class="zodiac">[牛]</span></td>
-                        <td class="winning">开17中</td>
-                    </tr> 
-                    <tr>
-                        <td>206期平特一肖 <span class="zodiac">[猴]</span></td>
-                        <td class="winning">开10中</td>
-                    </tr>
-                    <tr>
-                        <td>204期平特一肖 <span class="zodiac">[马]</span></td>
-                        <td class="winning">开36中</td>
-                    </tr>
-                    <tr>
-                        <td>202期平特一肖 <span class="zodiac">[鸡]</span></td>
-                        <td class="winning">开09中</td>
-                    </tr>
-                    <tr>
-                        <td>201期平特一肖 <span class="zodiac">[蛇]</span></td>
-                        <td class="winning">开01中</td>
-                    </tr>
-                    <tr>
-                        <td>199期平特一肖 <span class="zodiac">[牛]</span></td>
-                        <td class="winning">开05中</td>
-                    </tr>
-                    <tr>
-                        <td>197期平特一肖 <span class="zodiac">[蛇]</span></td>
-                        <td class="winning">开25中</td>
-                    </tr>
-                    <tr>
-                        <td>196期平特一肖 <span class="zodiac">[兔]</span></td>
-                        <td class="winning">开27中</td>
-                    </tr>
-                    <tr>
-                        <td>195期平特一肖 <span class="zodiac">[狗]</span></td>
-                        <td class="winning">开08中</td>
-                    </tr>
-                    <tr>
-                        <td>194期平特一肖 <span class="zodiac">[猴]</span></td>
-                        <td class="winning">开46中</td>
-                    </tr>
-                    <tr>
-                        <td>193期平特一肖 <span class="zodiac">[龙]</span></td>
-                        <td class="winning">开14中</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-scroll-container">
+                <table class="lottery-table">
+                    <thead>
+                        <tr>
+                            <th colspan="2">新澳门精准 [平特一肖]</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>219期平特一肖 <span class="zodiac">[羊]</span></td>
+                            <td class="winning">开00中</td>
+                        </tr> 
+                        <tr>
+                            <td>218期平特一肖 <span class="zodiac">[猴]</span></td>
+                            <td class="winning">开34中</td>
+                        </tr> 
+                        <tr>
+                            <td>217期平特一肖 <span class="zodiac">[兔]</span></td>
+                            <td class="winning">开03中</td>
+                        </tr> 
+                        <tr>
+                            <td>215期平特一肖 <span class="zodiac">[马]</span></td>
+                            <td class="winning">开36中</td>
+                        </tr>
+                        <tr>
+                            <td>213期平特一肖 <span class="zodiac">[龙]</span></td>
+                            <td class="winning">开38中</td>
+                        </tr>
+                        <tr>
+                            <td>212期平特一肖 <span class="zodiac">[鼠]</span></td>
+                            <td class="winning">开18中</td>
+                        </tr>
+                        <tr>
+                            <td>211期平特一肖 <span class="zodiac">[兔]</span></td>
+                            <td class="winning">开27中</td>
+                        </tr>
+                        <tr>
+                            <td>209期平特一肖 <span class="zodiac">[猪]</span></td>
+                            <td class="winning">开31中</td>
+                        </tr>
+                        <tr>
+                            <td>207期平特一肖 <span class="zodiac">[蛇]</span></td>
+                            <td class="winning">开01中</td>
+                        </tr>
+                        <tr>
+                            <td>206期平特一肖 <span class="zodiac">[兔]</span></td>
+                            <td class="winning">开27中</td>
+                        </tr>
+                        <tr>
+                            <td>205期平特一肖 <span class="zodiac">[虎]</span></td>
+                            <td class="winning">开04中</td>
+                        </tr>
+                        <tr>
+                            <td>203期平特一肖 <span class="zodiac">[猴]</span></td>
+                            <td class="winning">开10中</td>
+                        </tr>
+                        <tr>
+                            <td>200期平特一肖 <span class="zodiac">[牛]</span></td>
+                            <td class="winning">开41中</td>
+                        </tr>
+                        <tr>
+                            <td>199期平特一肖 <span class="zodiac">[羊]</span></td>
+                            <td class="winning">开11中</td>
+                        </tr>
+                        <tr>
+                            <td>198期平特一肖 <span class="zodiac">[鸡]</span></td>
+                            <td class="winning">开33中</td>
+                        </tr>
+                        <tr>
+                            <td>197期平特一肖 <span class="zodiac">[猪]</span></td>
+                            <td class="winning">开43中</td>
+                        </tr>
+                        <tr>
+                            <td>195期平特一肖 <span class="zodiac">[狗]</span></td>
+                            <td class="winning">开08中</td>
+                        </tr>
+                        <tr>
+                            <td>194期平特一肖 <span class="zodiac">[猴]</span></td>
+                            <td class="winning">开46中</td>
+                        </tr>
+                        <tr>
+                            <td>193期平特一肖 <span class="zodiac">[马]</span></td>
+                            <td class="winning">开24中</td>
+                        </tr>
+                        <tr>
+                            <td>192期平特一肖 <span class="zodiac">[狗]</span></td>
+                            <td class="winning">开20中</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             
             <div class="promotion">
                 一个很神奇的网站, 持续关注, 给你新人生！
